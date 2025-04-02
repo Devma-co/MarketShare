@@ -38,6 +38,8 @@ define(['N/search', 'N/render', 'N/file', 'N/log', 'N/record', 'N/email'], funct
                     ["custbody_devma_invoice_send_date", "onorbefore", "today"],
                     "AND",
                     ["amountremaining", "greaterthan", "0.00"],
+                    "AND",
+                    ["memorized", "is", "F"]
                 ],
                 columns: [
                     search.createColumn({ name: "tranid", summary: "COUNT", label: "Document Number" }),
